@@ -20,7 +20,7 @@ path = "src/main.rs"
 ```
 
 From the project root you can run the lambda:  
-`docker run --rm -v \`pwd\`/target/x86_64-unknown-linux-musl/release/:/var/task:ro,delegated lambci/lambda:provided handler '{"firstName": "world"}'`
+``docker run --rm -v `pwd`/target/x86_64-unknown-linux-musl/release/:/var/task:ro,delegated lambci/lambda:provided handler '{"firstName": "world"}'``
 
 > Note: `handler '{"json": "event"}'` is required here, the container
 > seems to accept input on stdin
